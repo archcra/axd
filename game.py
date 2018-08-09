@@ -6,9 +6,10 @@ import loggers as lg
 
 from boardHelper import Position
 from functools import reduce
+from settings import run_folder
 
 class Game:
-    syActionsMap = np.loadtxt('SymmetricalActionMap.txt',dtype=int)
+    syActionsMap = np.loadtxt(run_folder + 'SymmetricalActionMap.txt',dtype=int)
     def __init__(self):
         # init_state = '8979695949392919097717866646260600102030405060708012720323436383'
         # http://bp.rifle.im/api/utils/converter
