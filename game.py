@@ -3,8 +3,6 @@
 
 import numpy as np
 import loggers as lg
-import sys
-sys.path.insert(0, './games/xq2')
 
 from boardHelper import Position
 from functools import reduce
