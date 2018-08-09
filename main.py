@@ -51,9 +51,9 @@ else:
 
 # create an untrained neural network objects from the config file
 current_NN = Residual_CNN(config.REG_CONST, config.LEARNING_RATE,
-                          (2,) + env.grid_shape,   env.action_size, config.HIDDEN_CNN_LAYERS)
+                          env.input_shape,   env.action_size, config.HIDDEN_CNN_LAYERS)
 best_NN = Residual_CNN(config.REG_CONST, config.LEARNING_RATE,
-                       (2,) + env.grid_shape,   env.action_size, config.HIDDEN_CNN_LAYERS)
+                       env..input_shape,   env.action_size, config.HIDDEN_CNN_LAYERS)
 
 # If loading an existing neural netwrok, set the weights from that model
 if initialise.INITIAL_MODEL_VERSION != None:
@@ -127,23 +127,6 @@ while 1:
                 s['state'])
             best_value, best_probs, _ = best_player.get_preds(s['state'])
 
-            lg.logger_memory.info('MCTS VALUE FOR %s: %f',
-                                  s['playerTurn'], s['value'])
-            lg.logger_memory.info(
-                'CUR PRED VALUE FOR %s: %f', s['playerTurn'], current_value)
-            lg.logger_memory.info(
-                'BES PRED VALUE FOR %s: %f', s['playerTurn'], best_value)
-            lg.logger_memory.info('THE MCTS ACTION VALUES: %s', [
-                                  '%.2f' % elem for elem in s['AV']])
-            lg.logger_memory.info('CUR PRED ACTION VALUES: %s', [
-                                  '%.2f' % elem for elem in current_probs])
-            lg.logger_memory.info('BES PRED ACTION VALUES: %s', [
-                                  '%.2f' % elem for elem in best_probs])
-            lg.logger_memory.info('ID: %s', s['state'].id)
-            lg.logger_memory.info(
-                'INPUT TO MODEL: %s', current_player.model.convertToModelInput(s['state']))
-
-            s['state'].render(lg.logger_memory)
 
         ######## TOURNAMENT ########
         print('TOURNAMENT...')

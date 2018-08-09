@@ -24,7 +24,6 @@ class Game:
         self.history = [] # 走子的历史
 
         # TODO
-        self.grid_shape = (10,9)  # 10 row, 9 columns
         self.input_shape = (16, 10 , 9) # 14 kinds of pieces, each piece has a 9* 10 position squre array( 1 is 60 ply limits)
         # last one for playerTurn(For position only consider RED forever)
         self.name = 'xiangqi'
