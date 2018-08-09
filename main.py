@@ -53,7 +53,7 @@ else:
 current_NN = Residual_CNN(config.REG_CONST, config.LEARNING_RATE,
                           env.input_shape,   env.action_size, config.HIDDEN_CNN_LAYERS)
 best_NN = Residual_CNN(config.REG_CONST, config.LEARNING_RATE,
-                       env..input_shape,   env.action_size, config.HIDDEN_CNN_LAYERS)
+                       env.input_shape,   env.action_size, config.HIDDEN_CNN_LAYERS)
 
 # If loading an existing neural netwrok, set the weights from that model
 if initialise.INITIAL_MODEL_VERSION != None:
