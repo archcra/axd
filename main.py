@@ -8,7 +8,7 @@ from shutil import copyfile
 import random
 
 
-from keras.utils import plot_model
+# from keras.utils import plot_model
 
 from game import Game, GameState
 from agent import Agent
@@ -21,7 +21,7 @@ import loggers as lg
 from settings import run_folder, run_archive_folder
 import initialise
 import pickle
-import importlib
+# import importlib
 
 
 lg.logger_main.info('=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*')
@@ -71,8 +71,8 @@ else:
 
 # copy the config file to the run folder
 copyfile('./config.py', run_folder + 'config.py')
-plot_model(current_NN.model, to_file=run_folder +
-           'models/model.png', show_shapes=True)
+#plot_model(current_NN.model, to_file=run_folder +
+#           'models/model.png', show_shapes=True)
 
 print('\n')
 
