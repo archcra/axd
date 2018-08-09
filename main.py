@@ -88,8 +88,8 @@ iteration = 0
 while 1:
 
     iteration += 1
-    importlib.reload(lg)
-    importlib.reload(config)
+    # importlib.reload(lg)
+    # importlib.reload(config)
 
     print('ITERATION NUMBER ' + str(iteration))
 
